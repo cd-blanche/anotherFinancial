@@ -1,0 +1,148 @@
+:root {
+  --nav-color: white;
+  --nav-bg-color: black;
+  --body-bg-color: white;
+  --grid-card-border: black;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Press Start 2P";
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--body-bg-color);
+  flex-direction: column;
+  justify-content: space-between;
+}
+body, .header, .header-container {
+  align-items: center;
+  display: flex;
+}
+.header {
+  flex-shrink: 0;
+  width: 100%;
+  height: 150px;
+  background-color:black;
+  color: var(--nav-color);
+  justify-content: center;
+}
+.header-container {
+  /* border: 2px solid red; */
+  max-width: 1920px;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  margin: 0 40px;
+}
+.nav-links {
+  /* border: 2px solid red; */
+  display: flex;
+  gap: 1.5em;
+  justify-content: space-between;
+}
+.financi-logo {
+  display: block;
+  font-size: 2.5em;
+  /* border: 2px solid red; */
+}
+.header a , .footer a {
+  text-decoration: none;
+}
+.header a:visited, .footer a:visited {
+  color: var(--nav-color);
+}
+.header ul, .footer ul {
+  list-style: none;
+}
+
+
+
+/* header above */
+
+
+
+/* main below */
+
+
+
+.main {
+  flex: 1;
+  /* border: 1px solid red; */
+  width: 100%;
+  max-width: 1920px;
+}
+h1 {
+  font-size: 3em;
+  margin: 120px auto;
+  text-align: center;
+}
+h2 {
+  font-size: 1.4em;
+}
+.main-content-grid-container {
+  margin: 0 auto 120px;
+  
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  justify-content: center;
+  /* border: 1px solid red; */
+  width: 90%;
+  gap: 2em;
+  
+}
+.grid-card {
+  border: 4px solid var(--grid-card-border);
+  border-radius: 12px;
+  text-align: center;
+  padding: 20px 0;
+  height: 300px;
+}
+.wide-card {
+  grid-column: 1 / 5;
+  border: 4px solid var(--grid-card-border);
+  border-radius: 12px;
+  width: 100%;
+  height: 300px;
+}
+
+
+/* main above */
+/* footer below */
+
+
+
+.footer {
+  flex-shrink: 0;
+  width: 100%;
+  height: 200px;
+  color: var(--nav-color);
+  background-color: var(--nav-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+.footer-container {
+  max-width: 1920px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-links {
+  max-width: 500px;
+}
+.copyright {
+  text-align: center;
+}
+
+/* media queries below */
+
+
+/* media queries above */
