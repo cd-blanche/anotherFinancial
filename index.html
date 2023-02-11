@@ -25,9 +25,17 @@
   <main class="main">
     <h1>FINANCING GAMIFIED</h1>
     <div class="main-content-grid-container">
+
+      
       <div class="grid-card income">
         <h2>Income</h2>
+        <h3>Current Income: $<span id="current-income">0.00</span></h3>
+        <label for="add-income">Add Income</label>
+        <input type="number" id="add-income" min="0">
+        <input type="submit" value="Submit" onclick="calcIncomeTotal()">
       </div>
+
+
       <div class="grid-card expenses">
         <h2>Expenses</h2>
       </div>
@@ -53,5 +61,24 @@
       <p class="copyright">Copyright © Jacques Martinez 2023</p>
     </div>
   </footer>
+  <script>
+
+
+    function calcIncomeTotal() {
+      const currentIncome = document.getElementById('current-income');
+      const userInput = document.getElementById('add-income');
+      const userInputIncome = parseFloat(userInput.value);
+
+      if (userInputIncome > 0) {
+        const newIncome = userInputIncome + parseFloat(currentIncome.innerHTML);
+      currentIncome.innerHTML = String(newIncome);
+      } else {
+        // print out error text
+      }
+
+    }
+
+
+  </script>
 </body>
 </html>

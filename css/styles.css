@@ -83,6 +83,7 @@ body, .header, .header-container {
   /* border: 1px solid red; */
   width: 100%;
   max-width: 1700px;
+  margin: 0 40px;
 }
 h1 {
   font-size: 6em;
@@ -97,6 +98,7 @@ h2 {
   margin-bottom: 120px;
   /* border: 1px solid red; */
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-areas: 
   "income expenses assets liabilities"
   "quick-read quick-read quick-read quick-read";
@@ -112,6 +114,10 @@ h2 {
   padding: 20px 0;
   height: 300px;
   width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  padding: 20px 60px;
 }
 .income {
   grid-area: income;
