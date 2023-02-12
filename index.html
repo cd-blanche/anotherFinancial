@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <title>Document</title>
+  <script src="js/main.js"></script>
 </head>
 <body>
   <header class="header">
@@ -30,8 +31,9 @@
       <div class="grid-card income">
         <h2>Income</h2>
         <h3>Current Income: $<span id="current-income">0.00</span></h3>
-        <label for="add-income">Add Income</label>
-        <input type="number" id="add-income" min="0">
+        <label for="user-input">Add Income</label>
+        <span id="income-error-text">Please enter a valid number.</span>
+        <input type="number" id="user-input" min="0" placeholder="Enter net amount">
         <input type="submit" value="Submit" onclick="calcIncomeTotal()">
       </div>
 
@@ -61,24 +63,5 @@
       <p class="copyright">Copyright © Jacques Martinez 2023</p>
     </div>
   </footer>
-  <script>
-
-
-    function calcIncomeTotal() {
-      const currentIncome = document.getElementById('current-income');
-      const userInput = document.getElementById('add-income');
-      const userInputIncome = parseFloat(userInput.value);
-
-      if (userInputIncome > 0) {
-        const newIncome = userInputIncome + parseFloat(currentIncome.innerHTML);
-      currentIncome.innerHTML = String(newIncome);
-      } else {
-        // print out error text
-      }
-
-    }
-
-
-  </script>
 </body>
 </html>

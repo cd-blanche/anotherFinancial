@@ -41,7 +41,7 @@ body, .header, .header-container {
 }
 .header-container {
   /* border: 2px solid red; */
-  max-width: 1700px;
+  max-width: 1400px;
   width: 100%;
   height: 100%;
   justify-content: space-between;
@@ -82,7 +82,7 @@ body, .header, .header-container {
   flex: 1;
   /* border: 1px solid red; */
   width: 100%;
-  max-width: 1700px;
+  max-width: 1400px;
   margin: 0 40px;
 }
 h1 {
@@ -136,7 +136,11 @@ h2 {
   width: 100%;
 }
 
-
+#income-error-text {
+  font-size: 0.8em;
+  color: red;
+  display: none;
+}
 /* main above */
 /* footer below */
 
