@@ -33,7 +33,7 @@
         <h3>Current Income: $<span id="current-income">0.00</span></h3>
         <label for="user-input">Add Income</label>
         <span id="income-error-text">Please enter a valid number.</span>
-        <input type="number" id="user-input" min="0" placeholder="Enter net amount">
+      <input type="text" id="income-user-input" inputmode="decimal" placeholder="Enter net amount" oninput="validate(this)">
         <input type="submit" value="Submit" onclick="calcIncomeTotal()">
       </div>
 

@@ -40,7 +40,6 @@ body, .header, .header-container {
   justify-content: center;
 }
 .header-container {
-  /* border: 2px solid red; */
   max-width: 1400px;
   width: 100%;
   height: 100%;
@@ -48,7 +47,6 @@ body, .header, .header-container {
   margin: 0 40px;
 }
 .nav-links {
-  /* border: 2px solid red; */
   display: flex;
   gap: 1.5em;
   justify-content: space-between;
@@ -56,7 +54,6 @@ body, .header, .header-container {
 .financi-logo {
   display: block;
   font-size: 3em;
-  /* border: 2px solid red; */
 }
 .header a , .footer a {
   text-decoration: none;
@@ -69,12 +66,7 @@ body, .header, .header-container {
 }
 
 
-
-/* header above */
-
-
-
-/* main below */
+/* Main */
 
 
 
@@ -109,13 +101,14 @@ h2 {
 .grid-card {
   border: 1px solid var(--grid-card-border);
   background-color: var(--main-radial-gradient);
+  box-shadow: 0 0 10px var(--gradient-color-2);
   border-radius: 30px;
   text-align: center;
   padding: 20px 0;
-  height: 300px;
+  /* height: 300px; */
   width: 100%;
   display: flex;
-  gap: 10px;
+  gap: 5px;
   flex-direction: column;
   padding: 20px 60px;
 }
@@ -136,15 +129,16 @@ h2 {
   width: 100%;
 }
 
+/* Specifics */
+
 #income-error-text {
   font-size: 0.8em;
   color: red;
-  display: none;
+  visibility: hidden;
+  margin-bottom: 3px;
 }
-/* main above */
-/* footer below */
 
-
+/* Footer */
 
 .footer {
   flex-shrink: 0;
