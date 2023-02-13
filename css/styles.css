@@ -4,7 +4,8 @@
   --body-bg-color: #ebedee;
   --title-text-shadow: rgb(178, 178, 178);
   --grid-card-border: black;
-  --grid-card-box-shadow: rgb(178, 178, 178);
+  --grid-card-box-shadow: rgb(216, 216, 216);
+  --grid-card-input-border: black;
   --main-font-color: black;
   --gradient-color-1: #fdfbfb;
   --gradient-color-2: #ebedee;
@@ -94,8 +95,12 @@ h1 {
   text-shadow: 0 0 5px var(--title-text-shadow);
 }
 h2 {
-  font-size: 1.3em;
-  font-weight: 400;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.2em;
+  font-weight: 500;
 }
 .main-content-grid-container {
   margin: 0 40px 120px;
@@ -107,7 +112,7 @@ h2 {
   gap: 2em;
 }
 .grid-card {
-  border: 1px solid var(--grid-card-border);
+  /* border: 1px solid var(--grid-card-border); */
   background-color: var(--main-radial-gradient);
   border-radius: 30px;
   box-shadow: 0 0 10px var(--grid-card-box-shadow);
@@ -121,19 +126,56 @@ h2 {
 }
 .income {
   grid-area: income;
+  background: #56ab2f;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .expenses {
   grid-area: expenses;
+  background: #f12711;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
 }
 .assets {
   grid-area: assets;
+  background: #36D1DC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .liabilities {
   grid-area: liabilities;
+  background: #ED213A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .quick-read {
   grid-area: quick-read;
   width: 100%;
+  background: #8e9eab;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+.main-content-grid-container input[type="text"] {
+  border-radius: 20px;
+  /* border: 1px solid var(--grid-card-input-border); */
+  border: none;
+  height: 40px;
+  padding: 0px 10px;
+  margin-bottom: 10px;
+}
+.main-content-grid-container input[type="submit"] {
+  width: 40%;
+  margin: 0 auto;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  /* border: 1px solid var(--grid-card-input-border); */
+  font-weight: bold;
+  background-color: black;
+  color: white;
 }
 
 
