@@ -2,6 +2,10 @@
 finance tracker
 
 To do list
--- Income -- 
-Add weekly/bi-weekly/monthly income options
-Display current income depending on weekly/bi-weekly/monthly selection
+
+Connect to a database(Google Sheets?)
+--
+Implement click on card to display
+--
+Add weekly/bi-weekly/monthly options
+Display current amounts depending on weekly/bi-weekly/monthly selection
