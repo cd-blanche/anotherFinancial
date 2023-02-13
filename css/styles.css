@@ -95,21 +95,46 @@ h1 {
   text-shadow: 0 0 5px var(--title-text-shadow);
 }
 h2 {
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 600;
 }
 h3 {
   font-size: 1.2em;
   font-weight: 500;
 }
+.vertical-separator {
+  content: "";
+  border: 1px solid var(--main-white-color);
+  border-radius: 12px;
+  height: 70%;
+}
 .main-content-grid-container {
   margin: 0 40px 120px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: 
+  grid-template-areas:
+  "goals goals goals goals" 
   "income expenses assets liabilities"
   "quick-read quick-read quick-read quick-read";
   gap: 2em;
+}
+.main-content-grid-container input[type="text"] {
+  border-radius: 20px;
+  border: none;
+  height: 40px;
+  padding: 0px 10px;
+  margin-bottom: 10px;
+}
+.main-content-grid-container input[type="submit"] {
+  width: 40%;
+  height: 40px;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: none;
+  background-color: black;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
 }
 .grid-card {
   /* border: 1px solid var(--grid-card-border); */
@@ -123,6 +148,59 @@ h3 {
   gap: 10px;
   flex-direction: column;
   padding: 20px 30px;
+}
+.goals {
+  grid-area: goals;
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.goals * {
+  color: white;
+}
+.goals-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.goals-container-wish {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.goals-container input[type="text"] {
+  color: black;
+  display: block;
+}
+.goals-container input[type="submit"] {
+  width: 100%;
+}
+.goals-container-gallery {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.goals-container-gallery-item-container {
+  height: auto;
+  width: 160px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.goals-container-gallery-img-container {
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px; 
+
+}
+.goals-container-gallery img {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+.image-caption {
+  font-size: 0.8em;
+  margin: 5px 0;
 }
 .income {
   grid-area: income;
@@ -152,31 +230,12 @@ h3 {
 }
 .quick-read {
   grid-area: quick-read;
-  width: 100%;
   background: #8e9eab;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
 }
-.main-content-grid-container input[type="text"] {
-  border-radius: 20px;
-  /* border: 1px solid var(--grid-card-input-border); */
-  border: none;
-  height: 40px;
-  padding: 0px 10px;
-  margin-bottom: 10px;
-}
-.main-content-grid-container input[type="submit"] {
-  width: 40%;
-  margin: 0 auto;
-  height: 40px;
-  border-radius: 20px;
-  border: none;
-  /* border: 1px solid var(--grid-card-input-border); */
-  font-weight: bold;
-  background-color: black;
-  color: white;
-}
+
 
 
 /* Footer */
@@ -214,6 +273,7 @@ h3 {
   .main-content-grid-container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
+    "goals goals"
     "income expenses"
     "assets liabilities"
     "quick-read quick-read";
@@ -234,7 +294,28 @@ h3 {
     margin: 0 10px 120px;
   }
   .grid-card {
-    height: 180px;
-    padding: 10px 5px;
+    height: 250px;
+    padding: 10px 20px;
+  }
+  .goals-container-gallery-item-container {
+    width: 130px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  * {
+    font-size: 10px;
+  }
+  .main-content-grid-container {
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "goals" 
+    "income"
+    "expenses"
+    "assets"
+    "liabilities"
+    "quick-read";
+  }
+  .grid-card {
+    height: 220px;
   }
 }

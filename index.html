@@ -27,7 +27,47 @@
     <h1>FINANCING GAMIFIED</h1>
     <div class="main-content-grid-container">
 
-      
+
+      <div class="grid-card goals">
+        <h2>Goals</h2>
+        <div class="goals-container">
+          <div class="goals-container-wish">
+            <h3>Wishlist</h3>
+            <label for="wishlist-input">Enter a wish</label>
+            <input type="text" id="wishlist-input" placeholder="Make a wish">
+            <input type="submit" value="Add to Wishlist">
+          </div>
+          <div class="vertical-separator"></div>
+          <div class="goals-container-gallery">
+            <div class="goals-container-gallery-item-container">
+              <div class="goals-container-gallery-img-container">
+                <img src="https://static.bhphoto.com/images/images500x500/1654597828_1710331.jpg" alt="MacBook Air M2 Model Midnight Blue">
+              </div>
+              <p class="image-caption">$1999.00</p>
+            </div>
+            <div class="goals-container-gallery-item-container">
+              <div class="goals-container-gallery-img-container">
+                <img src="https://static.bhphoto.com/images/images500x500/1653922223_1703320.jpg" alt="Black Logitech MX Master 3S for Mac">
+              </div>
+              <p class="image-caption">$139.99</p>
+            </div>
+            <div class="goals-container-gallery-item-container">
+              <div class="goals-container-gallery-img-container">
+                <img src="https://static.bhphoto.com/images/images500x500/1653360638_1703339.jpg" alt="Gray Logitech MX Mechanical Mini Wireless Keyboard with Linear Switches">
+              </div>
+              <p class="image-caption">$199.99</p>
+            </div>
+            <div class="goals-container-gallery-item-container">
+              <div class="goals-container-gallery-img-container">
+                <img src="https://static.bhphoto.com/images/images500x500/1676301621_1436761.jpg" alt='BenQ PD2700U DesignVue Designer 27" 16:9 IPS Monitor'>
+              </div>
+              <p class="image-caption">$599.98</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div class="grid-card income">
         <h2>Income</h2>
         <h3>Current Income: $<span id="current-income">0.00</span></h3>
@@ -46,7 +86,6 @@
       </div>
 
 
-
       <div class="grid-card assets">
         <h2>Assets</h2>
         <h3>Current Assets: $<span id="current-assets">0.00</span></h3>
@@ -54,7 +93,6 @@
         <input type="text" id="asset-input" inputmode="decimal" placeholder="Enter net amount">
         <input type="submit" value="Add" onclick="calcTotal('current-assets','asset-input');">
       </div>
-
 
 
       <div class="grid-card liabilities">
@@ -66,11 +104,11 @@
      </div>
 
 
-
-
       <div class="grid-card quick-read">
         <h2>Quick Read</h2>
       </div>
+
+
     </div>
   </main>
 
