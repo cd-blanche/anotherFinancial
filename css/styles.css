@@ -2,7 +2,9 @@
   --nav-color: #ebedee;
   --nav-bg-color: black;
   --body-bg-color: #ebedee;
+  --title-text-shadow: rgb(178, 178, 178);
   --grid-card-border: black;
+  --grid-card-box-shadow: rgb(178, 178, 178);
   --main-font-color: black;
   --gradient-color-1: #fdfbfb;
   --gradient-color-2: #ebedee;
@@ -12,7 +14,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-size: 16px;
   font-family: 'Work Sans', sans-serif;
   box-sizing: border-box;
   color: var(--main-font-color)
@@ -27,7 +28,16 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-body, .header, .header-container {
+
+
+
+/* Header */
+
+
+
+
+body, .header, .header-container,
+.footer, .footer-container {
   align-items: center;
   display: flex;
 }
@@ -40,15 +50,13 @@ body, .header, .header-container {
   justify-content: center;
 }
 .header-container {
-  /* border: 2px solid red; */
-  max-width: 1700px;
+  max-width: 1400px;
   width: 100%;
   height: 100%;
   justify-content: space-between;
   margin: 0 40px;
 }
 .nav-links {
-  /* border: 2px solid red; */
   display: flex;
   gap: 1.5em;
   justify-content: space-between;
@@ -56,7 +64,6 @@ body, .header, .header-container {
 .financi-logo {
   display: block;
   font-size: 3em;
-  /* border: 2px solid red; */
 }
 .header a , .footer a {
   text-decoration: none;
@@ -70,46 +77,40 @@ body, .header, .header-container {
 
 
 
-/* header above */
-
-
-
-/* main below */
+/* Main */
 
 
 
 .main {
   flex: 1;
-  /* border: 1px solid red; */
   width: 100%;
-  max-width: 1700px;
+  max-width: 1400px;
   margin: 0 40px;
 }
 h1 {
   font-size: 6em;
   margin: 250px auto;
   text-align: center;
+  text-shadow: 0 0 5px var(--title-text-shadow);
 }
 h2 {
   font-size: 1.3em;
   font-weight: 400;
 }
 .main-content-grid-container {
-  margin-bottom: 120px;
-  /* border: 1px solid red; */
+  margin: 0 40px 120px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas: 
   "income expenses assets liabilities"
   "quick-read quick-read quick-read quick-read";
-  width: 100%;
   gap: 2em;
-  
 }
 .grid-card {
   border: 1px solid var(--grid-card-border);
   background-color: var(--main-radial-gradient);
   border-radius: 30px;
+  box-shadow: 0 0 10px var(--grid-card-box-shadow);
   text-align: center;
   padding: 20px 0;
   height: 300px;
@@ -137,8 +138,7 @@ h2 {
 }
 
 
-/* main above */
-/* footer below */
+/* Footer */
 
 
 
@@ -148,8 +148,6 @@ h2 {
   height: 200px;
   color: var(--nav-color);
   background-color: var(--nav-bg-color);
-  display: flex;
-  align-items: center;
   justify-content: center;
   padding: 40px 0;
 }
@@ -157,10 +155,8 @@ h2 {
   max-width: 1920px;
   width: 100%;
   height: 100%;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 }
 .footer-links {
   max-width: 500px;
@@ -170,7 +166,16 @@ h2 {
   color: var(--nav-color)
 }
 
-/* media queries below */
 
 
-/* media queries above */
+/* Media Queries */
+
+@media only screen and (max-width: 900px) {
+  .main-content-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "income expenses"
+    "assets liabilities"
+    "quick-read quick-read";
+  }
+}
