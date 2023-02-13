@@ -2,31 +2,21 @@
 
 
 
-function calcIncomeTotal() {
+function calcTotal(current, userInput) {
+  const currentTracking = document.getElementById(current);
+  const currentInput = document.getElementById(userInput);
+  const currentValue = parseFloat(currentInput.value);
 
-  const currentIncome = document.getElementById('current-income');
-  const incomeUserInput = document.getElementById('income-user-input');
-  const userInputIncome = parseFloat(incomeUserInput.value);
-  const errorText = document.getElementById('income-error-text');
-
-  if (userInputIncome > 0) {
-    // resets error visibility
-    errorText.style.visibility = "hidden";
-    const newIncome = userInputIncome + parseFloat(currentIncome.innerHTML);
-    currentIncome.innerHTML = (Math.round(newIncome * 100) / 100).toFixed(2);
-    // clears user input
-    incomeUserInput.value = "";
+  if (currentValue >= 0) {
+    currentInput.value = "";
+    const newValue = currentValue + parseFloat(currentTracking.innerHTML);
+    currentTracking.innerHTML = (Math.round(newValue * 100) / 100).toFixed(2);
   } else {
-    // print out error text
-    errorText.style.visibility = "visible";
-    incomeUserInput.placeholder = "Try again";    
-    // clears user input
-    incomeUserInput.value = "";
+    currentInput.value = "";
   }
 }
 
 // Prevent user from entering more than 2 decimal place values
-
 function validate(e) {
   // stores the initial value in a separate constant t
   const t = e.value;

@@ -31,22 +31,35 @@
       <div class="grid-card income">
         <h2>Income</h2>
         <h3>Current Income: $<span id="current-income">0.00</span></h3>
-        <label for="user-input">Add Income</label>
-        <span id="income-error-text">Please enter a valid number.</span>
-      <input type="text" id="income-user-input" inputmode="decimal" placeholder="Enter net amount" oninput="validate(this)">
-        <input type="submit" value="Submit" onclick="calcIncomeTotal()">
+        <label for="income-input">Add Income</label>
+        <input type="text" id="income-input" inputmode="decimal" placeholder="Enter net amount" oninput="validate(this)">
+        <input type="submit" value="Submit" onclick="calcTotal('current-income','income-input');">
       </div>
 
 
       <div class="grid-card expenses">
         <h2>Expenses</h2>
+        <h3>Current Expenses: $<span id="current-expenses">0.00</span></h3>
+        <label for="expense-input">Add Expense</label>
+        <input type="text" id="expense-input" inputmode="decimal" placeholder="Enter net amount">
+        <input type="submit" value="Submit" onclick="calcTotal('current-expenses','expense-input');">
       </div>
+
+
+
       <div class="grid-card assets">
         <h2>Assets</h2>
       </div>
+
+
+
       <div class="grid-card liabilities">
         <h2>Liabilities</h2>
      </div>
+
+
+
+
       <div class="grid-card quick-read">
         <h2>Quick Read</h2>
       </div>
