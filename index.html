@@ -49,12 +49,20 @@
 
       <div class="grid-card assets">
         <h2>Assets</h2>
+        <h3>Current Assets: $<span id="current-assets">0.00</span></h3>
+        <label for="asset-input">Add Assets</label>
+        <input type="text" id="asset-input" inputmode="decimal" placeholder="Enter net amount">
+        <input type="submit" value="Submit" onclick="calcTotal('current-assets','asset-input');">
       </div>
 
 
 
       <div class="grid-card liabilities">
         <h2>Liabilities</h2>
+        <h3>Current Liabilities: $<span id="current-liabilities">0.00</span></h3>
+        <label for="liability-input">Add Liabilities</label>
+        <input type="text" id="liability-input" inputmode="decimal" placeholder="Enter net amount">
+        <input type="submit" value="Submit" onclick="calcTotal('current-liabilities','liability-input');">
      </div>
 
 
