@@ -114,7 +114,7 @@ h3 {
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
   "goals goals goals goals" 
-  "income expenses assets liabilities"
+  "income expenses savings debt"
   "quick-read quick-read quick-read quick-read";
   gap: 2em;
 }
@@ -215,15 +215,15 @@ h3 {
   background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
 }
-.assets {
-  grid-area: assets;
+.savings {
+  grid-area: savings;
   background: #36D1DC;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
-.liabilities {
-  grid-area: liabilities;
+.debt {
+  grid-area: debt;
   background: #ED213A;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -275,7 +275,7 @@ h3 {
     grid-template-areas: 
     "goals goals"
     "income expenses"
-    "assets liabilities"
+    "savings debt"
     "quick-read quick-read";
   }
 }
@@ -311,8 +311,8 @@ h3 {
     "goals" 
     "income"
     "expenses"
-    "assets"
-    "liabilities"
+    "savings"
+    "debt"
     "quick-read";
   }
   .grid-card {

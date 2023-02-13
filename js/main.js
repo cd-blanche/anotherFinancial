@@ -9,10 +9,12 @@ function calcTotal(current, userInput) {
 
   if (currentValue >= 0) {
     currentInput.value = "";
+    currentInput.placeholder = "Enter net amount"
     const newValue = currentValue + parseFloat(currentTracking.innerHTML);
     currentTracking.innerHTML = (Math.round(newValue * 100) / 100).toFixed(2);
   } else {
     currentInput.value = "";
+    currentInput.placeholder = "Please enter a numerical value"
   }
 }
 
