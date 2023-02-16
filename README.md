@@ -1,5 +1,7 @@
 # financi
 
+https://cd-blanche.github.io/financi/
+
 Financing made fun. 
 
 Finances have always been a swept-to-the-side thing for me. It was never really taught back in high school and even in the brief period I attended college. I would always seem to avoid, despite always getting the usual advice on:
