@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="financi-logo">FINANCI</a> 
+      <ul class="nav-links">
+        <li><a href="">Dashboard</a></li>
+        <li><a href="">Profile</a></li>
+        <li><a href="">Settings</a></li>
+        <li><button type="button" id="theme-mode" data-theme="light">Switch to<br>Dark Mode</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1>DASHBOARD</h1>
+    <div class="main-content-grid-container">
+
+      <div class="grid-card goals">
+        <h2>Rewards</h2>
+        <div class="goals-container">
+          <div class="goals-container-wish">
+            <h3>Wishlist</h3>
+            <label for="wishlist-input">Enter a wish</label>
+            <input type="text" id="wishlist-input" placeholder="Make a wish">
+            <input type="submit" value="Add to Wishlist">
+          </div>
+          <div class="vertical-separator"></div>
+          <div class="goals-container-gallery">
+            <div class="goals-container-gallery-item-container">
+              <div class="goals-container-gallery-img-container">
+                <img src="https://static.bhphoto.com/images/images500x500/1654597828_1710331.jpg" alt="MacBook Air M2 Model Midnight Blue">
+              </div>
+              <p class="image-caption">100/1999</p>
+            </div>
+            <div class="goals-container-gallery-item-container">
+              <div class="goals-container-gallery-img-container">
+                <img src="https://static.bhphoto.com/images/images500x500/1653922223_1703320.jpg" alt="Black Logitech MX Master 3S for Mac">
+              </div>
+              <p class="image-caption">0/139</p>
+            </div>
+            <div class="goals-container-gallery-item-container">
+              <div class="goals-container-gallery-img-container">
+                <img src="https://static.bhphoto.com/images/images500x500/1653360638_1703339.jpg" alt="Gray Logitech MX Mechanical Mini Wireless Keyboard with Linear Switches">
+              </div>
+              <p class="image-caption">0/199</p>
+            </div>
+            <div class="goals-container-gallery-item-container">
+              <div class="goals-container-gallery-img-container">
+                <img src="https://static.bhphoto.com/images/images500x500/1676301621_1436761.jpg" alt='BenQ PD2700U DesignVue Designer 27" 16:9 IPS Monitor'>
+              </div>
+              <p class="image-caption">0/599</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="grid-card income">
+        <h2>Income</h2>
+        <h3>Current Income: $<span id="current-income">0.00</span></h3>
+        <label for="income-input">Add Income</label>
+        <input type="text" id="income-input" inputmode="decimal" placeholder="Enter net amount" oninput="validate(this)">
+        <input type="submit" value="Add" onclick="calcTotal('current-income','income-input');">
+      </div>
+
+
+      <div class="grid-card expenses">
+        <h2>Expenses</h2>
+        <h3>Current Expenses: $<span id="current-expenses">0.00</span></h3>
+        <label for="expense-input">Add Expense</label>
+        <input type="text" id="expense-input" inputmode="decimal" placeholder="Enter net amount">
+        <input type="submit" value="Add" onclick="calcTotal('current-expenses','expense-input');">
+      </div>
+
+
+      <div class="grid-card savings">
+        <h2>Savings</h2>
+        <h3>Current Savings: $<span id="current-savings">0.00</span></h3>
+        <label for="savings-input">Add Savings</label>
+        <input type="text" id="savings-input" inputmode="decimal" placeholder="Enter net amount">
+        <input type="submit" value="Add" onclick="calcTotal('current-savings','savings-input');">
+      </div>
+
+
+      <div class="grid-card debt">
+        <h2>Debt</h2>
+        <h3>Current Debt: $<span id="current-debt">0.00</span></h3>
+        <label for="debt-input">Add debt</label>
+        <input type="text" id="debt-input" inputmode="decimal" placeholder="Enter net amount">
+        <input type="submit" value="Add" onclick="calcTotal('current-debt','debt-input');">
+     </div>
+
+
+      <div class="grid-card quick-read">
+        <h2>Quick Read</h2>
+      </div>
+
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <ul class="nav-links footer-links">
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Help</a></li>
+      </ul>
+      <p class="copyright">Copyright © Jacques Martinez 2023</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
