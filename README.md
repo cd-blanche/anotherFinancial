@@ -1,4 +1,4 @@
-# financi
+# anotherFinancial (formerly financi)
 
 https://cd-blanche.github.io/financi/
 
